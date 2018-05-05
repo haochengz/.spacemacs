@@ -38,6 +38,7 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      helm
+     django
      auto-completion
      better-defaults
      emacs-lisp
@@ -317,8 +318,6 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   ;; --Set escape key-binding to "jj"
-  (setcdr evil-insert-state-map nil)
-  (define-key evil-insert-state-map [escape] 'evil-normal-state)
   (setq-default evil-escape-key-sequence "jj")
   )
 
