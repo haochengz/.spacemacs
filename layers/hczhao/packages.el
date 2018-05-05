@@ -63,5 +63,5 @@ Each entry is either:
 
 (defun hczhao/init-youdao-dictionary()
   (use-package youdao-dictionary
-    :init)
-  )
+    :init
+    (spacemacs/set-leader-keys "oy" 'youdao-dictionary-search-at-point+)))
