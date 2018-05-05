@@ -1,4 +1,4 @@
-;;; packages.el --- basics layer packages file for Spacemacs.
+;;; packages.el --- hczhao layer packages file for Spacemacs.
 ;;
 ;; Copyright (c) 2012-2017 Sylvain Benner & Contributors
 ;;
@@ -18,20 +18,20 @@
 ;;
 ;;
 ;; Briefly, each package to be installed or configured by this layer should be
-;; added to `basics-packages'. Then, for each package PACKAGE:
+;; added to `hczhao-packages'. Then, for each package PACKAGE:
 ;;
 ;; - If PACKAGE is not referenced by any other Spacemacs layer, define a
-;;   function `basics/init-PACKAGE' to load and initialize the package.
+;;   function `hczhao/init-PACKAGE' to load and initialize the package.
 
 ;; - Otherwise, PACKAGE is already referenced by another Spacemacs layer, so
-;;   define the functions `basics/pre-init-PACKAGE' and/or
-;;   `basics/post-init-PACKAGE' to customize the package as it is loaded.
+;;   define the functions `hczhao/pre-init-PACKAGE' and/or
+;;   `hczhao/post-init-PACKAGE' to customize the package as it is loaded.
 
 ;;; Code:
 
-(defconst basics-packages
-  '()
-  "The list of Lisp packages required by the basics layer.
+(defconst hczhao-packages
+  '(youdao-dictionary)
+  "The list of Lisp packages required by the hczhao layer.
 
 Each entry is either:
 
@@ -60,3 +60,8 @@ Each entry is either:
 
 
 ;;; packages.el ends here
+
+(defun hczhao/init-youdao-dictionary()
+  (use-package youdao-dictionary
+    :init)
+  )
